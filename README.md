@@ -2,6 +2,19 @@
 
 Helps you set up unit testing within WordPress ecosystem. It will install all the required tools, so you're ready to go.
 
+The directory structure should be as follows:
+
+```
+.ddev/
+tests/
+   |-unit
+   |-integration
+   |-phpunit.xml
+composer.json
+wp-admin/
+wp-content/
+wp-*
+```
 
 # Install steps:
 
