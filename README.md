@@ -18,7 +18,7 @@ wp-*
 
 # Install steps:
 
-1. `ddev add-on get https://github.com/iamntz/ddev-wp-unit-testing/archive/refs/tags/1.0.0.tar.gz`
+1. `ddev add-on get https://github.com/iamntz/ddev-wp-unit-testing/tarball/master`
 2. add `/tests/wp-unit-testing` & `/tests/.phpunit.result.cache` to your `.gitignore`
 3. add these scripts to your `composer.json` file:
 

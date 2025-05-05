@@ -1,6 +1,8 @@
 <?php
 
-class SampleIntegrationTest extends WP_UnitTestCase
+namespace integration;
+
+class SampleIntegrationTest extends \WP_UnitTestCase
 {
     public static function setUpBeforeClass(): void
     {
