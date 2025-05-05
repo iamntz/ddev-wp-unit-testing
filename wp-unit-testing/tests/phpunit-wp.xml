@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="bootstrap-wp.php"
+        backupGlobals="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        backupStaticAttributes="false"
+        processIsolation="false"
+        stopOnFailure="false"
+        verbose="true"
+>
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <directory>./integration/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <const name="WP_ENVIRONMENT_TYPE" value="testing"/>
+
+        <env name="APP_ENV" value="testing"/>
+        <env name="WP_TESTS_DIR" value='./wordpress-tests-lib'/>
+    </php>
+</phpunit>

@@ -1,0 +1,12 @@
+name: ddev-wp-unit-testing
+
+project_files:
+  - config.wp-unit-testing.yaml
+  - commands/web/install-wp-tests.sh
+  - wp-unit-testing/tests/
+
+post_install_actions:
+  - mkdir -p ../tests/{unit,integration}
+  - cp -r ./wp-unit-testing/tests/* ../tests/
+  - rm -rf ./wp-unit-testing
+  - touch ../tests/load-wp-plugins.php

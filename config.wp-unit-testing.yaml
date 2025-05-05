@@ -1,0 +1,9 @@
+#ddev-generated
+
+webimage_extra_packages: [subversion]
+hooks:
+  post-start:
+    - exec: chmod +x /var/www/html/.ddev/commands/web/install-wp-tests.sh
+    - exec: mysql -uroot -proot -hdb -e "CREATE DATABASE IF NOT EXISTS wp_unit_test; GRANT ALL ON wp_unit_test.* TO 'db'@'%';"
+    - exec: bash /var/www/html/.ddev/commands/web/install-wp-tests.sh
+    - exec: composer require --dev brain/monkey yoast/phpunit-polyfills phpunit/phpunit:9.6

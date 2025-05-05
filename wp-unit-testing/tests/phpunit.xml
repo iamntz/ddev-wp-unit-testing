@@ -1,0 +1,23 @@
+<phpunit bootstrap="../vendor/autoload.php"
+         backupGlobals="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         backupStaticAttributes="false"
+         processIsolation="false"
+         stopOnFailure="false"
+         verbose="true">
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <directory>unit</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <const name="ABSPATH" value="./"/>
+        <const name="WP_ENVIRONMENT_TYPE" value="testing"/>
+
+        <env name="APP_ENV" value="testing"/>
+        <env name="WP_TESTS_DIR" value='./wordpress-tests-lib'/>
+    </php>
+</phpunit>
